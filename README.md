@@ -14,10 +14,13 @@ Antes de começar, certifique-se de ter:
    ```sh
    git clone https://github.com/seu-usuario/seu-repositorio.git
    cd seu-repositorio
+2. Instale a dependência necessária:
+   ```sh
+      npm i prompt-sync
 
-2. Retire o comentário do código do exercício que deseja executar, se necessário.
+3. Retire o comentário do código do exercício que deseja executar, se necessário.
 
-3. Navegue até o arquivo desejado e execute-o com Node.js:
+4. Navegue até o arquivo desejado e execute-o com Node.js:
    ```sh
    node nome-do-arquivo.js
 
