@@ -114,3 +114,114 @@ console.log(fatorial(5))*/
 // Crie function debounce(fn, delay) que receba uma função fn e um delay
 // em ms, retornando uma nova função que só executa fn se não for
 // chamada novamente dentro do intervalo.
+
+
+// 6. Memoization
+// Implemente function memoize(fn) que armazene em cache chamadas
+// anteriores de fn (por argumentos), retornando resultados instantâneos em
+// repetidas invocações.
+
+/*function memorize(fn) {
+  const cache = new Map()
+
+  return function (...args) {
+    const key = JSON.stringify(args)
+
+    if (cache.has(key)) {
+      return cache.get(key)
+    }
+
+    const result = fn.apply(this, args)
+    cache.set(key, result)
+    return result
+  }
+}
+
+function fibonacci(n) {
+  if (n < 2) return n
+  return fibonacci(n - 1) + fibonacci(n - 2)
+}
+
+const fastFib = memorize(function fibonacci(n) {
+  if (n < 2) return n
+  return fastFib(n - 1) + fastFib(n - 2)
+})
+
+console.log(fibonacci(30))
+console.log(fastFib(30))
+*/
+
+// Seção 3: Arrays e Objetos Complexos
+
+// 7. Mapeamento e Ordenação
+// Dado um array produtos = [{ nome, preco }, …], crie uma função que
+// retorne um novo array apenas com os nomes, ordenados por preço
+// crescente, usando map, sort.
+// const products = [
+//   { name: "Tênis", price: 299.99 },
+//   { name: "Bota", price: 499.99 },
+//   { name: "Chinelo", price: 49.99 },
+//   { name: "Pantufa", price: 39.99 },
+//   { name: "Sandália", price: 59.99 }
+// ]
+
+// function arrayOrderByPrice(array) {
+//   return array
+//     .slice()
+//     .sort((a, b) => a.price - b.price)
+//     .map(p => p.name)
+// }
+
+// console.log(arrayOrderByPrice(products))
+
+
+// 8. Agrupamento por Propriedade
+// Em vendas = [{ cliente, total }, …], use reduce para gerar um objeto onde
+// cada chave é um cliente e o valor é a soma de todos os seus total.
+// let vendas = [
+//   { cliente: "Joao", total: 200 },
+//   { cliente: "Pedro", total: 150 },
+//   { cliente: "Carlos", total: 3.50 },
+//   { cliente: "Maria", total: 2500 },
+//   { cliente: "Catarina", total: null },
+//   { cliente: "Vicente", total: undefined }
+// ]
+
+// const vendasPorCliente = vendas.reduce((acc, venda) => {
+//   acc[venda.cliente] = (acc[venda.cliente] || 0) + (typeof venda.total === "number" ? venda.total : 0)
+//   return acc
+// }, {})
+
+// console.log(vendasPorCliente)
+
+
+// 9. Conversão Entre Formatos
+// Escreva duas funções:
+// ○ paresParaObjeto(pares) recebe um array de pares [ [chave,
+// valor], … ] e retorna o objeto equivalente.
+// ○ objetoParaPares(obj) faz o inverso, retornando um array de
+// pares.
+// let arrayPares = [
+//   [1, 2],
+//   ["3", "4"],
+//   [false, true],
+//   [7, 8],
+//   [9, 10],
+//   ["Cliente", "Pafúncio"],
+//   [4, "Tri Campeão"]
+// ]
+
+// function paresParaObjeto(array) {
+//   return array.reduce((acc, arr) => {
+//     acc[arr[0]] = arr[1]
+//     return acc
+//   }, {})
+// }
+
+// function objetosParaPares(object) {
+//   return Object.entries(object)
+// }
+
+// let objPares = paresParaObjeto(arrayPares)
+// console.log(objPares)
+// console.log(objetosParaPares(objPares))
