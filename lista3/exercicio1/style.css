@@ -1,0 +1,39 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, sans-serif;    
+    background-color: #333;
+    color: #ccc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    background-color: #222;
+    width: 100%;
+    text-align: center;
+}
+
+.container {
+    flex: 1;
+    background-color: #a5c2d4;
+    color: #333;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    margin: 40px;
+    gap: 40px;
+    border-radius: 8px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
+}
+
+.footer {
+    background-color: #222;
+    width: 100%;
+    text-align: center;
+}
