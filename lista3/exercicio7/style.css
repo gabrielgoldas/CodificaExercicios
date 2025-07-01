@@ -1,0 +1,145 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #fff;
+    width: 100%;
+}
+
+header,
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2f3e46;
+    padding: 10px;
+    text-align: center;
+}
+
+header h2 {
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.links a,
+.menu a {
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+.links a:hover {
+    font-weight: 600;
+}
+
+#burger {
+    display: none;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #2f3e46;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    z-index: 1;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.menu.active {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+main {
+    background-color: #52796f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+}
+
+.italic {
+    background-color: #84a98c;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(47, 62, 70, .3);
+    width: 80%;
+    font-style: italic;
+    font-weight: 300;
+    margin: 10px auto;
+}
+
+img {
+    height: 350px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(47, 62, 70, .3);
+    border: 2px solid #84a98c;
+}
+
+
+footer {
+    font-weight: 300;
+}
+
+@media (max-width: 1280px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    img {
+        min-width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        justify-content: start;
+        padding: 20px;
+    }
+
+    .links {
+        display: none;
+    }
+
+    #burger {
+        display: block;
+    }
+}
+
+@media (max-width: 425px) {
+    img {
+        width: 250px;
+    }
+}
