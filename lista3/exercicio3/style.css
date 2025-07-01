@@ -1,0 +1,71 @@
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(to top, #2f3e46, #cad2c5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    background-color: #222;
+    border-radius: 5px;
+    border: none;
+    width: 40%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 40px;
+}
+
+.form label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.form input,
+textarea {
+    resize: none;
+    padding: 4px 8px;
+    font-size: 14px;
+    border-radius: inherit;
+    border: inherit;
+    outline: none;
+}
+
+textarea {
+    height: 100px;
+}
+
+.form input:focus,
+textarea:focus {
+    box-shadow: 0 2px 8px rgba(236, 243, 158, .5);
+}
+
+button {
+    font-family: inherit;
+    font-size: 16px;
+    border: inherit;
+    border-radius: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100px;
+    padding: 7px 15px;
+    margin: 0 auto;
+    background-color: #84a98c;
+    transition: all .3s ease;
+}
+
+button:hover {
+    background-color: #50a362;
+}
+
+button:focus {
+    background-color: #84a98c;
+    transform: scale(.95);
+}
