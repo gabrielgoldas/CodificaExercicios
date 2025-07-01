@@ -1,0 +1,75 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #c2c5aa;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+.item {
+    background-color: #656d4a;
+    text-align: center;
+    overflow: hidden;
+    max-width: fit-content;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(51, 61, 41, .4);
+    transition: all .3s ease-in-out;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item:focus {
+    transform: scale(1);
+}
+
+.image {
+    filter: blur(1px);
+    border-radius: 6px;
+    height: 250px;
+    min-width: 250px;
+    object-fit: cover;
+    transition: filter .3s ease-in-out;
+}
+
+.image:hover {
+    filter: blur(0);
+}
+
+.description {
+    color: #b6ad90;
+    font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
